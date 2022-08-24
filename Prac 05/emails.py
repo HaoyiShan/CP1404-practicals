@@ -7,7 +7,7 @@ while Get_email != "":
     Get_name = input("Please enter your username:")
 
 
-def Name_correct():
+def name_correct():
     for email in name_email:
         print("Email:", email)
         check = input("Is your name {}? (y/n)".format(name_email[email]))
@@ -16,7 +16,7 @@ def Name_correct():
             name_email[email] = new_name
 
 
-Name_correct()
+name_correct()
 
 for i in name_email.items():
     print(i)
