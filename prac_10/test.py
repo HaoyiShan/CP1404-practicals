@@ -73,7 +73,7 @@ doctest.testmod()
 # then write the body of the function so that the tests pass
 
 
-def format_p_t_s(x):
+def format_p_t_s(x=""):
     """
     >>> format_p_t_s('hello')
     'Hello.'
@@ -82,7 +82,12 @@ def format_p_t_s(x):
     >>> format_p_t_s('I love py')
     'I love py.'
     """
-    pass
+    s1 = list(x)
+    s1[0] = s1[0].upper()
+    if s1[-1] != ".":
+        s1.append(".")
+    s = "".join(s1)
+    return s
 
 
 doctest.testmod()
